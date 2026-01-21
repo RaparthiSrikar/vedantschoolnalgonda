@@ -1,0 +1,25 @@
+/* App.css */
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    /* Soft background */
+    position: relative;
+    overflow-x: hidden;
+    color: #333;
+}
+
+.main-content {
+    flex-grow: 1;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+/* Custom Selection Styles */
+::selection {
+    background-color: #667eea;
+    /* Accent color */
+    color: white;
+}
