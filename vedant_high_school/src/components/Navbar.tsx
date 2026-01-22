@@ -28,8 +28,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     return (
         <nav
             className={`sticky top-0 z-[60] transition-all duration-300 ${isScrolled
-                    ? 'bg-white/95 shadow-md backdrop-blur-lg'
-                    : 'bg-white border-b border-gray-100'
+                ? 'bg-white/95 shadow-md backdrop-blur-lg'
+                : 'bg-white border-b border-gray-100'
                 }`}
         >
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
