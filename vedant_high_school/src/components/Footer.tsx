@@ -42,7 +42,7 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                         <div className="text-white">
                             <Icons.MapPin />
                         </div>
-                        <p className="text-[12px] md:text-[14px] font-black uppercase leading-tight tracking-tight max-w-[280px]">
+                        <p className="text-[14px] font-black uppercase leading-tight tracking-tight max-w-[280px]">
                             OLD RAGHAVENDRA COLLEGE,<br />VIDYANAGAR, RAMAGIRI, NALGONDA
                         </p>
                     </a>
@@ -55,7 +55,7 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                         <div className="text-white">
                             <Icons.Phone />
                         </div>
-                        <p className="text-[16px] md:text-[20px] font-black tracking-wide">
+                        <p className="text-[14px] font-black tracking-wide">
                             +91 90525 99399
                         </p>
                     </a>
@@ -68,7 +68,7 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                         <div className="text-white">
                             <Icons.Mail />
                         </div>
-                        <p className="text-[12px] md:text-[14px] font-black tracking-tight break-all max-w-[280px]">
+                        <p className="text-[14px] font-black tracking-tight break-all max-w-[280px]">
                             vedanthighschoolnalgonda@gmail.com
                         </p>
                     </a>
@@ -79,8 +79,8 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                             <Icons.Calendar className="w-6 h-6" />
                         </div>
                         <div>
-                            <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-white/70">Working Days</p>
-                            <p className="text-[12px] md:text-[14px] font-black">Mon - Sat: Open<br />Sunday: Holiday</p>
+                            <p className="text-[14px] font-bold uppercase tracking-widest text-white/70">Working Days</p>
+                            <p className="text-[14px] font-black">Mon - Sat: Open<br />Sunday: Holiday</p>
                         </div>
                     </div>
 
@@ -90,42 +90,43 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" /><polyline points="12 6 12 12 16 14" /></svg>
                         </div>
                         <div>
-                            <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-white/70">School Timings</p>
-                            <p className="text-[12px] md:text-[14px] font-black">9:00 AM – 5:00 PM</p>
-                            <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-white/70">Office Timings</p>
-                            <p className="text-[12px] md:text-[14px] font-black">8:30 AM – 5:00PM</p>
+                            <p className="text-[14px] font-bold uppercase tracking-widest text-white/70">School Timings</p>
+                            <p className="text-[14px] font-black">9:00 AM – 5:00 PM</p>
+                            <p className="text-[14px] font-bold uppercase tracking-widest text-white/70">Office Timings</p>
+                            <p className="text-[14px] font-black">8:30 AM – 5:00PM</p>
                         </div>
                     </div>
 
 
 
-                    {/* Horizontal Line Separator */}
-                    <div className="w-full h-px bg-white/20 mb-6"></div>
-
-                    {/* Social Links Row */}
-                    {/* Social Links & Copyright */}
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-                        <div className="flex justify-center gap-4">
-                            {socialLinks.map((social) => (
-                                <a
-                                    key={social.label}
-                                    href={social.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2.5 rounded-full bg-white/10 hover:bg-white hover:text-brandRed transition-all duration-300 transform hover:-translate-y-2 border border-white/10 shadow-lg"
-                                    aria-label={social.label}
-                                >
-                                    <div className="scale-100">
-                                        {social.icon}
-                                    </div>
-                                </a>
-                            ))}
-                        </div>
-
-                        <p className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-white/30 font-black text-center">
-                            © {currentYear} Vedant High School. Empowering Futures, Rooted in Values.
-                        </p>
                     </div>
+
+                {/* Horizontal Line Separator */}
+                <div className="w-full h-px bg-white/20 mb-6"></div>
+
+                {/* Social Links Row - Centered */}
+                <div className="flex justify-center gap-4 mb-6">
+                    {socialLinks.map((social) => (
+                        <a
+                            key={social.label}
+                            href={social.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2.5 rounded-full bg-white/10 hover:bg-white hover:text-brandRed transition-all duration-300 transform hover:-translate-y-2 border border-white/10 shadow-lg"
+                            aria-label={social.label}
+                        >
+                            <div className="scale-100">
+                                {social.icon}
+                            </div>
+                        </a>
+                    ))}
+                </div>
+
+                {/* Copyright */}
+                <div className="text-center">
+                    <p className="text-[14px] uppercase tracking-[0.3em] text-white/30 font-black">
+                        © {currentYear} Vedant High School. Empowering Futures, Rooted in Values.
+                    </p>
                 </div>
             </div>
         </footer>
