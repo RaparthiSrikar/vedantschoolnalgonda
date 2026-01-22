@@ -33,23 +33,21 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-    const startTimer = () => {
+    const nextSlide = React.useCallback(() => {
+        setCurrentSlide((prev) => (prev === HERO_IMAGES.length - 1 ? 0 : prev + 1));
+    }, []);
+
+    const startTimer = React.useCallback(() => {
         if (timerRef.current) clearInterval(timerRef.current);
         timerRef.current = setInterval(nextSlide, 8000);
-    };
-
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev === HERO_IMAGES.length - 1 ? 0 : prev + 1));
-    };
+    }, [nextSlide]);
 
     useEffect(() => {
         startTimer();
         return () => {
             if (timerRef.current) clearInterval(timerRef.current);
         };
-    }, []);
-
-
+    }, [startTimer]);
 
     return (
         <div className="space-y-0 bg-white animate-fade-in">
@@ -345,13 +343,15 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
                     <div className="relative max-w-5xl mx-auto">
                         <div className="relative z-10 aspect-video w-full rounded-[3rem] overflow-hidden bg-black shadow-2xl">
-                            <iframe
-                                className="w-full h-full"
+                            <video
+                                className="w-full h-full object-cover"
                                 src="https://ik.imagekit.io/s7him6spj/clideo_editor_e319f34220a643deba919abce40b5f48.mp4"
                                 title="Vedant High School Campus Tour"
-                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                            ></iframe>
+                                controls
+                                playsInline
+                            >
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>

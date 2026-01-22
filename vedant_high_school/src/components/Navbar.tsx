@@ -28,8 +28,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     return (
         <nav
             className={`sticky top-0 z-[60] transition-all duration-300 ${isScrolled
-                    ? 'bg-white/95 shadow-md backdrop-blur-lg'
-                    : 'bg-white border-b border-gray-100'
+                ? 'bg-white/95 shadow-md backdrop-blur-lg'
+                : 'bg-white border-b border-gray-100'
                 }`}
         >
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
@@ -41,14 +41,19 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                         <a
                             href="#home"
                             onClick={(e) => handleLinkClick(e, Page.Home)}
-                            className="flex items-center h-full group cursor-pointer"
+                            className="flex items-center h-full group cursor-pointer gap-3"
                         >
                             <div className="h-full transition-transform duration-300 group-hover:scale-[1.02]">
                                 <img
-                                    src="https://res.cloudinary.com/dkivpkaaj/image/upload/v1768197701/WhatsApp_Image_2026-01-03_at_14.13.46_vxghhe.png"
+                                    src="/header_logo.png"
                                     alt="Vedant High School Logo"
                                     className="h-full w-auto object-contain brightness-105 contrast-105"
                                 />
+                            </div>
+                            <div className="flex flex-col justify-center">
+                                <span className="font-display font-bold text-xl md:text-2xl text-primary tracking-tight leading-none">
+                                    Vedant High School
+                                </span>
                             </div>
                         </a>
                     </div>

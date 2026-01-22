@@ -80,7 +80,7 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                         </div>
                         <div>
                             <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-white/70">School Timings</p>
-                            <p className="text-[12px] md:text-[14px] font-black">9:00 AM – 4:30 PM</p>
+                            <p className="text-[12px] md:text-[14px] font-black">9:00 AM – 5:00 PM</p>
                         </div>
                     </div>
 
@@ -91,7 +91,7 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                         </div>
                         <div>
                             <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-white/70">Office Timings</p>
-                            <p className="text-[12px] md:text-[14px] font-black">9:00 AM – 4:30 PM</p>
+                            <p className="text-[12px] md:text-[14px] font-black">8:30 AM – 5:00PM</p>
                         </div>
                     </div>
                 </div>

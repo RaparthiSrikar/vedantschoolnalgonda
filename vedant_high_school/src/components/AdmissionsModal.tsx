@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './AdmissionsModal.css';
+import admissionImage from '../assets/uploaded_poster.png';
 
 interface AdmissionsModalProps {
     onClose?: () => void;
@@ -57,27 +58,24 @@ const AdmissionsModal: React.FC<AdmissionsModalProps> = ({ onClose }) => {
                 </button>
 
                 <div className="modal-content">
-                    <h2 className="modal-headline">Admissions Open!</h2>
-
-                    <p className="modal-description">
-                        Join Vedant High School and be part of our thriving academic community.
-                        We're accepting applications for the upcoming academic year. Take the first
-                        step towards an exceptional educational journey with us.
-                    </p>
-
-                    <div className="modal-actions">
-                        <button
-                            className="btn btn-primary"
-                            onClick={handleApplyNow}
-                        >
-                            Apply Now
-                        </button>
-                        <button
-                            className="btn btn-secondary"
-                            onClick={handleContactUs}
-                        >
-                            Contact Us
-                        </button>
+                    <div className="modal-image-container">
+                        <img src={admissionImage} alt="Admission Open" className="modal-image" />
+                    </div>
+                    <div className="modal-text-content">
+                        <div className="modal-actions">
+                            <button
+                                className="btn btn-primary"
+                                onClick={handleApplyNow}
+                            >
+                                Admission Enquiry
+                            </button>
+                            <button
+                                className="btn btn-secondary"
+                                onClick={handleContactUs}
+                            >
+                                Contact Us
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

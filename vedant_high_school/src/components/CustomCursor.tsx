@@ -3,13 +3,9 @@ import React, { useState, useEffect } from 'react';
 const CustomCursor: React.FC = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isPointer, setIsPointer] = useState(false);
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible] = useState(() => window.matchMedia('(pointer: fine)').matches);
 
     useEffect(() => {
-        // Only enable for devices with a mouse/fine pointer
-        if (window.matchMedia('(pointer: fine)').matches) {
-            setIsVisible(true);
-        }
 
         const onMouseMove = (e: MouseEvent) => {
             setPosition({ x: e.clientX, y: e.clientY });
