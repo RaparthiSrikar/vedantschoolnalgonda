@@ -14,7 +14,8 @@ import {
     ArrowRight,
     Facebook,
     Instagram,
-    Youtube
+    Youtube,
+    Calendar
 } from 'lucide-react';
 import { Page } from './types';
 
@@ -34,7 +35,8 @@ export const Icons = {
     ArrowRight: ArrowRight,
     Facebook: Facebook,
     Instagram: Instagram,
-    YouTube: Youtube
+    YouTube: Youtube,
+    Calendar: Calendar
 };
 
 export const NAVIGATION_ITEMS = [

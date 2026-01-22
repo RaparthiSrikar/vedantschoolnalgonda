@@ -45,15 +45,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                         >
                             <div className="h-full transition-transform duration-300 group-hover:scale-[1.02]">
                                 <img
-                                    src="/header_logo.png"
-                                    alt="Vedant High School Logo"
+                                    src="/new_header_logo.png"
+                                    alt="Vedant High School"
                                     className="h-full w-auto object-contain brightness-105 contrast-105"
                                 />
-                            </div>
-                            <div className="flex flex-col justify-center">
-                                <span className="font-display font-bold text-xl md:text-2xl text-primary tracking-tight leading-none">
-                                    Vedant High School
-                                </span>
                             </div>
                         </a>
                     </div>

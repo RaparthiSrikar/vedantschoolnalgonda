@@ -30,7 +30,7 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
             <div className="max-w-7xl mx-auto px-4">
 
                 {/* Contact Info Row - Top Section */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-2 mb-6 px-2 flex-wrap">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6 px-2 w-full">
 
                     {/* Address Item */}
                     <a
@@ -73,6 +73,17 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                         </p>
                     </a>
 
+                    {/* Working Days Item */}
+                    <div className="flex flex-col items-center gap-3 text-center">
+                        <div className="text-white">
+                            <Icons.Calendar className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-white/70">Working Days</p>
+                            <p className="text-[12px] md:text-[14px] font-black">Mon - Sat: Open<br />Sunday: Holiday</p>
+                        </div>
+                    </div>
+
                     {/* School Timings Item */}
                     <div className="flex flex-col items-center gap-3 text-center">
                         <div className="text-white">
@@ -81,47 +92,40 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                         <div>
                             <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-white/70">School Timings</p>
                             <p className="text-[12px] md:text-[14px] font-black">9:00 AM – 5:00 PM</p>
-                        </div>
-                    </div>
-
-                    {/* Office Timings Item */}
-                    <div className="flex flex-col items-center gap-3 text-center">
-                        <div className="text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" /><polyline points="12 6 12 12 16 14" /></svg>
-                        </div>
-                        <div>
                             <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-white/70">Office Timings</p>
                             <p className="text-[12px] md:text-[14px] font-black">8:30 AM – 5:00PM</p>
                         </div>
                     </div>
-                </div>
 
-                {/* Horizontal Line Separator */}
-                <div className="w-full h-px bg-white/20 mb-6"></div>
 
-                {/* Social Links Row */}
-                <div className="flex justify-center gap-4 mb-6">
-                    {socialLinks.map((social) => (
-                        <a
-                            key={social.label}
-                            href={social.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-2.5 rounded-full bg-white/10 hover:bg-white hover:text-brandRed transition-all duration-300 transform hover:-translate-y-2 border border-white/10 shadow-lg"
-                            aria-label={social.label}
-                        >
-                            <div className="scale-100">
-                                {social.icon}
-                            </div>
-                        </a>
-                    ))}
-                </div>
 
-                {/* Copyright Section */}
-                <div className="flex flex-col items-center pt-3 border-t border-white/10">
-                    <p className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-white/30 font-black text-center">
-                        © {currentYear} Vedant High School. Empowering Futures, Rooted in Values.
-                    </p>
+                    {/* Horizontal Line Separator */}
+                    <div className="w-full h-px bg-white/20 mb-6"></div>
+
+                    {/* Social Links Row */}
+                    {/* Social Links & Copyright */}
+                    <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+                        <div className="flex justify-center gap-4">
+                            {socialLinks.map((social) => (
+                                <a
+                                    key={social.label}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2.5 rounded-full bg-white/10 hover:bg-white hover:text-brandRed transition-all duration-300 transform hover:-translate-y-2 border border-white/10 shadow-lg"
+                                    aria-label={social.label}
+                                >
+                                    <div className="scale-100">
+                                        {social.icon}
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+
+                        <p className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-white/30 font-black text-center">
+                            © {currentYear} Vedant High School. Empowering Futures, Rooted in Values.
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>
