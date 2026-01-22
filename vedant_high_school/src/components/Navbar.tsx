@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 <div className="flex justify-between items-center h-[60px] md:h-[80px] overflow-hidden">
 
                     {/* Branding Section - Maximized Logo height within the fixed navbar height */}
-                    <div className="flex items-center flex-shrink-0 h-full py-1">
+                    <div className="flex items-center flex-shrink-0 h-full py-3">
                         <a
                             href="#home"
                             onClick={(e) => handleLinkClick(e, Page.Home)}
@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                                     key={item.page}
                                     href={`#${item.page}`}
                                     onClick={(e) => handleLinkClick(e, item.page as Page)}
-                                    className={`text-[10px] font-black uppercase tracking-[0.15em] transition-all py-1 relative group ${currentPage === item.page ? 'text-brandOrange' : 'text-primary/70 hover:text-primary'
+                                    className={`text-xs font-black uppercase tracking-[0.15em] transition-all py-1 relative group ${currentPage === item.page ? 'text-brandOrange' : 'text-primary/70 hover:text-primary'
                                         }`}
                                 >
                                     {item.label}
@@ -76,7 +76,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                     <div className="hidden lg:flex items-center flex-shrink-0">
                         <button
                             onClick={() => onNavigate(Page.Admissions)}
-                            className="bg-primary text-white px-7 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-brandRed transition-all shadow-lg active:scale-95"
+                            className="bg-primary text-white px-7 py-3 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-brandRed transition-all shadow-lg active:scale-95"
                         >
                             Enquire Now
                         </button>
