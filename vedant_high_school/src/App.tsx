@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import LearningTools from './components/LearningTools';
 import CustomCursor from './components/CustomCursor';
 import AdmissionsModal from './components/AdmissionsModal';
+import { SEO_CONFIG } from './seoData';
 import './App.css';
 
 const App: React.FC = () => {
@@ -32,6 +33,32 @@ const App: React.FC = () => {
 
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  // Dynamic SEO Update
+  useEffect(() => {
+    const seo = SEO_CONFIG[currentPage];
+    if (seo) {
+      document.title = seo.title;
+
+      // Update Meta Description
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.setAttribute('name', 'description');
+        document.head.appendChild(metaDesc);
+      }
+      metaDesc.setAttribute('content', seo.description);
+
+      // Update Meta Keywords
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
+      }
+      metaKeywords.setAttribute('content', seo.keywords);
+    }
+  }, [currentPage]);
 
   const navigateTo = (page: Page) => {
     window.location.hash = page;
