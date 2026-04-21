@@ -104,6 +104,14 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
                 {/* Horizontal Line Separator */}
                 <div className="w-full h-px bg-white/20 mb-6"></div>
 
+                {/* Quick Links for SEO */}
+                <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 text-sm font-bold text-white/80">
+                    <button onClick={() => onNavigate(Page.BestSchool)} className="hover:text-white transition-colors">Best School in Nalgonda</button>
+                    <button onClick={() => onNavigate(Page.CbseSchool)} className="hover:text-white transition-colors">CBSE School in Nalgonda</button>
+                    <button onClick={() => onNavigate(Page.EnglishMediumSchool)} className="hover:text-white transition-colors">English Medium School Nalgonda</button>
+                    <button onClick={() => onNavigate(Page.Blog)} className="hover:text-white transition-colors">Educational Blog</button>
+                </div>
+
                 {/* Social Links Row - Centered */}
                 <div className="flex justify-center gap-4 mb-6">
                     {socialLinks.map((social) => (

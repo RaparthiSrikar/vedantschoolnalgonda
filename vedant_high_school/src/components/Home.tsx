@@ -9,23 +9,23 @@ interface HomeProps {
 const HERO_IMAGES = [
     {
         url: "https://res.cloudinary.com/dkivpkaaj/image/upload/v1767506238/Screenshot_2026-01-04_at_11.26.40_AM_ld4pnj.png",
-        alt: "Students in a modern classroom"
+        alt: "Best school in Nalgonda modern classroom"
     },
     {
         url: "https://res.cloudinary.com/dkivpkaaj/image/upload/v1767522619/Screenshot_2026-01-04_at_3.57.10_PM_y4dyh4.png",
-        alt: "Primary school learning environment"
+        alt: "Top school in Nalgonda primary education"
     },
     {
         url: "https://res.cloudinary.com/dkivpkaaj/image/upload/v1767522557/Screenshot_2026-01-03_at_9.07.07_PM_alqg1x.png",
-        alt: "Collaborative student activities"
+        alt: "English medium school in Nalgonda student activities"
     },
     {
         url: "https://res.cloudinary.com/dkivpkaaj/image/upload/v1767696824/Screenshot_2026-01-06_at_4.21.28_PM_iis9dq.png",
-        alt: "kids playing"
+        alt: "CBSE school in Nalgonda sports activities"
     },
     {
         url: "https://res.cloudinary.com/dkivpkaaj/image/upload/v1767698660/Screenshot_2026-01-04_at_12.03.28_PM_cp3krv.png",
-        alt: "Hands-on science learning"
+        alt: "Best school in Nalgonda science lab experiments"
     },
 ];
 
@@ -132,12 +132,17 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                                 <div className="w-4 h-1 bg-brandYellow"></div>
                                 <span className="text-brandRed text-sm font-black uppercase tracking-widest ml-2">Legacy of Learning</span>
                             </div>
-                            <h3 className="text-5xl font-bold font-display text-primary leading-tight">
-                                A Journey of <span className="text-brandRed italic">Excellence</span> Rooted in <span className="text-brandOrange">Values</span>
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed text-lg">
-                                Established in 2025, Vedant High School combines ancient values with modern vision to achieve victory in every academic and personal pursuit. Our curriculum is designed to foster critical thinking and moral integrity.
-                            </p>
+                            <h1 className="text-4xl md:text-5xl font-bold font-display text-primary leading-tight">
+                                Best School in Nalgonda for Quality Education
+                            </h1>
+                            <div className="text-gray-600 leading-relaxed text-lg space-y-4">
+                                <p>
+                                    Welcome to Vedant High School, widely recognized as the <strong>best school in Nalgonda</strong>. Established with a vision to redefine learning, we combine ancient values with modern pedagogy to achieve victory in every academic and personal pursuit. Our curriculum is designed to foster critical thinking, moral integrity, and lifelong learning.
+                                </p>
+                                <p>
+                                    As a premier <strong>English medium school in Nalgonda</strong>, we provide an immersive environment that enhances communication skills and global readiness. Whether you are searching for the <strong>top school in Nalgonda</strong> or a reliable <strong>CBSE school in Nalgonda</strong>, Vedant High School stands out with its commitment to holistic development, world-class infrastructure, and dedicated faculty.
+                                </p>
+                            </div>
 
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="p-6 bg-brandOrange/5 rounded-3xl border-l-4 border-brandOrange group hover:bg-brandOrange transition-colors duration-300">
@@ -161,7 +166,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                             <div className="relative aspect-square rounded-[3rem] overflow-hidden">
                                 <img
                                     src="https://res.cloudinary.com/dkivpkaaj/image/upload/v1767520544/Screenshot_2026-01-04_at_3.24.47_PM_bdogh4.png"
-                                    alt="Students collaborating"
+                                    alt="Students collaborating at best school in Nalgonda"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                             </div>
@@ -178,8 +183,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <section className="py-24 bg-white border-y border-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl font-black text-primary font-display uppercase tracking-tight mb-4">Our Distinction</h2>
-                        <p className="text-gray-500 text-lg">What sets Vedant High School apart in the educational landscape.</p>
+                        <h2 className="text-4xl font-black text-primary font-display uppercase tracking-tight mb-4">Why Choose Us</h2>
+                        <p className="text-gray-500 text-lg max-w-2xl mx-auto">Discover what makes Vedant High School the top school in Nalgonda, providing an unmatched educational experience.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
@@ -203,8 +208,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <section className="py-24 bg-softBg">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div className="mb-20 space-y-4">
-                        <h2 className="text-4xl md:text-5xl font-black text-primary font-display uppercase tracking-tight">Academic Pathways</h2>
-                        <div className="flex justify-center gap-1">
+                        <h2 className="text-4xl md:text-5xl font-black text-primary font-display uppercase tracking-tight">Academic Excellence</h2>
+                        <p className="text-gray-500 text-lg max-w-2xl mx-auto">As a leading CBSE school in Nalgonda, our academic pathways are meticulously structured to bring out the best in every child.</p>
+                        <div className="flex justify-center gap-1 mt-4">
                             <div className="w-10 h-2 bg-brandOrange rounded-full"></div>
                             <div className="w-10 h-2 bg-brandOrange rounded-full"></div>
                             <div className="w-10 h-2 bg-brandOrange rounded-full"></div>
@@ -263,10 +269,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                         <div className="w-full lg:w-1/2 space-y-10">
                             <div className="space-y-4">
                                 <h4 className="text-brandYellow font-black text-xs uppercase tracking-[0.4em]">Modern Infrastructure</h4>
-                                <h2 className="text-4xl md:text-5xl font-black text-primary font-display leading-tight uppercase">Tools for Next-Gen <span className="text-brandOrange">Visionaries</span></h2>
+                                <h2 className="text-4xl md:text-5xl font-black text-primary font-display leading-tight uppercase">World-Class <span className="text-brandOrange">Facilities</span></h2>
                             </div>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                Our campus is more than just classrooms. We provide specialized labs for Science and Computers, a library full of wonders, and sports fields that foster teamwork and resilience.
+                                Our campus is more than just classrooms. We provide specialized labs for Science and Computers, a library full of wonders, and sports fields that foster teamwork and resilience. Every corner of our school is designed to inspire creativity and support the comprehensive development of our students.
                             </p>
                             <div className="grid grid-cols-1 gap-8">
                                 <div className="flex gap-4 items-start">
@@ -290,12 +296,12 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                             <div className="grid grid-cols-2 gap-4">
                                 <img
                                     src="https://res.cloudinary.com/dkivpkaaj/image/upload/v1767698660/Screenshot_2026-01-04_at_12.03.28_PM_cp3krv.png"
-                                    alt="Science Lab"
+                                    alt="Science Lab at best school in Nalgonda"
                                     className="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-500"
                                 />
                                 <img
                                     src="https://res.cloudinary.com/dkivpkaaj/image/upload/v1767697233/Screenshot_2026-01-06_at_4.29.45_PM_guljvu.png"
-                                    alt="Library"
+                                    alt="Library at top CBSE school in Nalgonda"
                                     className="rounded-3xl shadow-xl mt-8 hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
@@ -354,6 +360,24 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                             </video>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Admissions Open CTA */}
+            <section className="py-20 bg-primary border-t-8 border-brandYellow text-center px-4">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-4xl md:text-5xl font-display font-black text-white mb-6 uppercase tracking-wide">
+                        Admissions Open 2026
+                    </h2>
+                    <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+                        Secure your child's future at the best school in Nalgonda. We are currently accepting applications for the upcoming academic year. Join us in shaping tomorrow's leaders today!
+                    </p>
+                    <button 
+                        onClick={() => onNavigate(Page.Admissions)}
+                        className="bg-gradient-to-r from-brandRed to-brandOrange text-white font-black uppercase tracking-[0.2em] px-10 py-5 rounded-full shadow-2xl hover:scale-105 hover:shadow-brandOrange/50 transition-all duration-300 border-2 border-white/20"
+                    >
+                        Apply For Admission Now
+                    </button>
                 </div>
             </section>
         </div>

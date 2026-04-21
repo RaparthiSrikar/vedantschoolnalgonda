@@ -1,11 +1,18 @@
 export const Page = {
-    Home: 'home',
-    About: 'about',
-    Academics: 'academics',
-    Admissions: 'admissions',
-    Events: 'events',
-    Contact: 'contact',
-    LearningTools: 'learning-tools'
+    Home: '/',
+    About: '/about',
+    Academics: '/academics',
+    Admissions: '/admissions',
+    Events: '/events',
+    Contact: '/contact',
+    LearningTools: '/learning-tools',
+    BestSchool: '/best-school-in-nalgonda',
+    CbseSchool: '/cbse-school-in-nalgonda',
+    EnglishMediumSchool: '/english-medium-school-nalgonda',
+    Blog: '/blog',
+    BlogTop10: '/blog/top-10-schools-in-nalgonda-2026',
+    BlogHowToChoose: '/blog/how-to-choose-best-school-in-nalgonda',
+    BlogCbseVsState: '/blog/cbse-vs-state-board'
 } as const;
 
 export type Page = typeof Page[keyof typeof Page];

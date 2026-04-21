@@ -9,6 +9,13 @@ import Admissions from './components/Admissions';
 import Events from './components/Events';
 import Contact from './components/Contact';
 import LearningTools from './components/LearningTools';
+import BestSchool from './components/seo/BestSchool';
+import CbseSchool from './components/seo/CbseSchool';
+import EnglishMediumSchool from './components/seo/EnglishMediumSchool';
+import Blog from './components/blog/Blog';
+import BlogTop10 from './components/blog/BlogTop10';
+import BlogHowToChoose from './components/blog/BlogHowToChoose';
+import BlogCbseVsState from './components/blog/BlogCbseVsState';
 import CustomCursor from './components/CustomCursor';
 import AdmissionsModal from './components/AdmissionsModal';
 import { SEO_CONFIG } from './seoData';
@@ -18,20 +25,20 @@ const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '') as Page;
-      if (Object.values(Page).includes(hash)) {
-        setCurrentPage(hash);
+    const handlePathChange = () => {
+      const path = window.location.pathname as Page;
+      if (Object.values(Page).includes(path)) {
+        setCurrentPage(path);
       } else {
         setCurrentPage(Page.Home);
       }
       window.scrollTo(0, 0);
     };
 
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange();
+    window.addEventListener('popstate', handlePathChange);
+    handlePathChange();
 
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('popstate', handlePathChange);
   }, []);
 
   // Dynamic SEO Update
@@ -61,7 +68,9 @@ const App: React.FC = () => {
   }, [currentPage]);
 
   const navigateTo = (page: Page) => {
-    window.location.hash = page;
+    window.history.pushState({}, '', page);
+    setCurrentPage(page);
+    window.scrollTo(0, 0);
   };
 
   const renderPage = () => {
@@ -73,6 +82,13 @@ const App: React.FC = () => {
       case Page.Events: return <Events />;
       case Page.Contact: return <Contact />;
       case Page.LearningTools: return <LearningTools />;
+      case Page.BestSchool: return <BestSchool onNavigate={navigateTo} />;
+      case Page.CbseSchool: return <CbseSchool onNavigate={navigateTo} />;
+      case Page.EnglishMediumSchool: return <EnglishMediumSchool onNavigate={navigateTo} />;
+      case Page.Blog: return <Blog onNavigate={navigateTo} />;
+      case Page.BlogTop10: return <BlogTop10 onNavigate={navigateTo} />;
+      case Page.BlogHowToChoose: return <BlogHowToChoose onNavigate={navigateTo} />;
+      case Page.BlogCbseVsState: return <BlogCbseVsState onNavigate={navigateTo} />;
       default: return <Home onNavigate={navigateTo} />;
     }
   };

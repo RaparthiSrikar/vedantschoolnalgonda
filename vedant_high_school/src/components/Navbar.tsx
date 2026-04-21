@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                     {/* Branding Section - Maximized Logo height within the fixed navbar height */}
                     <div className="flex items-center flex-shrink-0 h-full py-3">
                         <a
-                            href="#home"
+                            href={Page.Home}
                             onClick={(e) => handleLinkClick(e, Page.Home)}
                             className="flex items-center h-full group cursor-pointer gap-3"
                         >
@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                             {NAVIGATION_ITEMS.map((item) => (
                                 <a
                                     key={item.page}
-                                    href={`#${item.page}`}
+                                    href={item.page}
                                     onClick={(e) => handleLinkClick(e, item.page as Page)}
                                     className={`text-xs font-black uppercase tracking-[0.15em] transition-all py-1 relative group ${currentPage === item.page ? 'text-brandOrange' : 'text-primary/70 hover:text-primary'
                                         }`}
@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                     {NAVIGATION_ITEMS.map((item) => (
                         <a
                             key={item.page}
-                            href={`#${item.page}`}
+                            href={item.page}
                             onClick={(e) => handleLinkClick(e, item.page as Page)}
                             className={`block py-2.5 text-base font-black tracking-[0.1em] uppercase transition-colors ${currentPage === item.page ? 'text-brandOrange' : 'text-primary/70'
                                 }`}

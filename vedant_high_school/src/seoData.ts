@@ -8,9 +8,9 @@ export interface SEOData {
 
 export const SEO_CONFIG: Record<Page, SEOData> = {
     [Page.Home]: {
-        title: 'Vedant High School Nalgonda | Best CBSE School in Nalgonda, Telangana',
-        description: 'Vedant High School Nalgonda – A premier CBSE English medium school offering Nursery to 10th grade education with smart classrooms, advanced labs, holistic development, and modern infrastructure. Admissions open.',
-        keywords: 'Vedant High School, Vedant High School Nalgonda, best high school in Nalgonda, best school in Nalgonda, CBSE school Nalgonda, English medium school Nalgonda, top schools in Nalgonda Telangana, Vedant school admissions, schools near Nalgonda, pre-primary school Nalgonda, primary school Nalgonda, secondary school Nalgonda, smart classrooms Nalgonda, holistic education Nalgonda, best CBSE school Telangana, Nalgonda schools 2025, quality education Nalgonda, modern school Nalgonda, global vision school, future ready school Nalgonda, parent testimonials Vedant school'
+        title: 'Best School in Nalgonda | Vedant High School Admissions Open 2026',
+        description: 'Vedant High School is one of the best schools in Nalgonda offering quality education, experienced faculty, modern classrooms, and excellent results. Admissions Open for 2026.',
+        keywords: 'best school in nalgonda, top school in nalgonda, cbse school in nalgonda, english medium school in nalgonda, Vedant High School, Vedant school admissions, quality education Nalgonda, smart classrooms Nalgonda, excellent results'
     },
     [Page.About]: {
         title: 'About Vedant High School | Vision, Mission & Leadership | Nalgonda',
@@ -41,5 +41,40 @@ export const SEO_CONFIG: Record<Page, SEOData> = {
         title: 'Learning Tools & Infrastructure | Labs, Library, Sports | Vedant High School',
         description: 'Discover the modern infrastructure at Vedant High School – fully equipped Science Labs (Physics, Chemistry, Biology), Computer Lab with high-speed internet, well-stocked Library, and indoor/outdoor Sports facilities.',
         keywords: 'Vedant school infrastructure, school learning tools, science laboratory school Nalgonda, physics lab school, chemistry lab school, biology lab school, computer lab school Nalgonda, digital literacy school, school library Nalgonda, reading habits school, sports facilities school Nalgonda, physical education school, indoor outdoor sports school, modern school facilities Nalgonda, smart school Nalgonda, school with labs Nalgonda, school with library Nalgonda, school with sports ground Nalgonda, school resources Nalgonda, technology driven education Nalgonda, hands on learning school, practical education Nalgonda'
+    },
+    [Page.BestSchool]: {
+        title: 'Best School in Nalgonda | Quality Education at Vedant High School',
+        description: 'Looking for the best school in Nalgonda? Vedant High School offers holistic education, expert faculty, and state-of-the-art facilities. Enroll your child today.',
+        keywords: 'best school in nalgonda, top school in nalgonda, quality education nalgonda, vedant high school'
+    },
+    [Page.CbseSchool]: {
+        title: 'Top CBSE School in Nalgonda | Vedant High School Curriculum',
+        description: 'Vedant High School is a leading CBSE school in Nalgonda providing an NEP-aligned curriculum, IIT-JEE & NEET foundations. Join us for academic excellence.',
+        keywords: 'cbse school in nalgonda, top cbse school nalgonda, ncert syllabus nalgonda, vedant school cbse'
+    },
+    [Page.EnglishMediumSchool]: {
+        title: 'Best English Medium School in Nalgonda | Vedant High School',
+        description: 'Empower your child at the finest English medium school in Nalgonda. Vedant High School offers modern classrooms and comprehensive personality development.',
+        keywords: 'english medium school in nalgonda, best english medium school nalgonda, english speaking school nalgonda'
+    },
+    [Page.Blog]: {
+        title: 'Blog & Articles | Insights on Education | Vedant High School',
+        description: 'Read the latest articles, educational insights, and guides from Vedant High School Nalgonda. Stay updated on school news and education tips.',
+        keywords: 'vedant high school blog, education articles nalgonda, school news nalgonda, parenting tips'
+    },
+    [Page.BlogTop10]: {
+        title: 'Top 10 Schools in Nalgonda (2026 Guide) | Vedant High School',
+        description: 'Discover the top 10 schools in Nalgonda for 2026. Learn how Vedant High School stands out with its holistic approach and state-of-the-art infrastructure.',
+        keywords: 'top 10 schools in nalgonda, best schools in nalgonda 2026, school ranking nalgonda'
+    },
+    [Page.BlogHowToChoose]: {
+        title: 'How to Choose the Best School in Nalgonda | Parents Guide',
+        description: 'A comprehensive guide for parents on how to choose the best school in Nalgonda for their children, focusing on curriculum, facilities, and faculty.',
+        keywords: 'how to choose a school, choosing best school nalgonda, school admission guide nalgonda'
+    },
+    [Page.BlogCbseVsState]: {
+        title: 'CBSE vs State Board: Which is Better for Your Child?',
+        description: 'Explore the differences between CBSE and State Board curriculums. Understand which educational path is the best fit for your child\'s future success.',
+        keywords: 'cbse vs state board, cbse curriculum benefits, state board vs cbse, vedant high school cbse'
     }
 };
