@@ -3,7 +3,7 @@ import React from 'react';
 import { Page } from '../types';
 import { Icons } from '../constants';
 
-const Footer: React.FC<{ onNavigate: (p: Page) => void }> = () => {
+const Footer: React.FC<{ onNavigate: (p: Page) => void }> = ({ onNavigate }) => {
     const SCHOOL_MAP_LINK = "https://www.google.com/maps/search/Vedant+High+School+Old+Raghavendra+College+Vidyanagar+Ramagiri+Nalgonda/";
     const currentYear = new Date().getFullYear();
 
