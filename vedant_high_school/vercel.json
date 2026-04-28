@@ -1,8 +1,20 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/((?!sitemap\\.xml|robots\\.txt|assets/|favicon\\.ico|logo\\.png|header_logo\\.png|new_header_logo\\.png|vite\\.svg).*)",
+      "destination": "/index.html"
+    }
   ]
 }
