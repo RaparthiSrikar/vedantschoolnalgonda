@@ -64,6 +64,17 @@ const App: React.FC = () => {
         document.head.appendChild(metaKeywords);
       }
       metaKeywords.setAttribute('content', seo.keywords);
+
+      // Update Canonical Link
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      const baseUrl = 'https://vedanthighschoolnalgonda.org';
+      const canonicalUrl = currentPage === Page.Home ? baseUrl : `${baseUrl}${currentPage}`;
+      canonical.setAttribute('href', canonicalUrl);
     }
   }, [currentPage]);
 
