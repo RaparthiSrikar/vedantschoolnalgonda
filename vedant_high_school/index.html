@@ -91,17 +91,21 @@
       font-family: 'Inter', sans-serif;
       background-color: #FFFFFF;
       color: #1a202c;
-      /* Hide default cursor globally */
+    }
+
+    /* Hide default cursor globally only when custom cursor is active */
+    .has-custom-cursor,
+    .has-custom-cursor body {
       cursor: none !important;
     }
 
     /* Ensure interactive elements also hide the cursor so the custom one is always visible */
-    a,
-    button,
-    input,
-    select,
-    textarea,
-    [role="button"] {
+    .has-custom-cursor a,
+    .has-custom-cursor button,
+    .has-custom-cursor input,
+    .has-custom-cursor select,
+    .has-custom-cursor textarea,
+    .has-custom-cursor [role="button"] {
       cursor: none !important;
     }
 

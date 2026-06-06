@@ -6,6 +6,9 @@ const CustomCursor: React.FC = () => {
     const [isVisible] = useState(() => window.matchMedia('(pointer: fine)').matches);
 
     useEffect(() => {
+        if (isVisible) {
+            document.documentElement.classList.add('has-custom-cursor');
+        }
 
         const onMouseMove = (e: MouseEvent) => {
             setPosition({ x: e.clientX, y: e.clientY });
@@ -23,8 +26,11 @@ const CustomCursor: React.FC = () => {
         };
 
         window.addEventListener('mousemove', onMouseMove);
-        return () => window.removeEventListener('mousemove', onMouseMove);
-    }, []);
+        return () => {
+            window.removeEventListener('mousemove', onMouseMove);
+            document.documentElement.classList.remove('has-custom-cursor');
+        };
+    }, [isVisible]);
 
     if (!isVisible) return null;
 
