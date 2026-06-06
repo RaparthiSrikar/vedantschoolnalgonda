@@ -64,7 +64,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                                     className={`relative px-4 py-2 text-[11px] font-black uppercase tracking-[0.15em] transition-all duration-300 rounded-full flex items-center justify-center ${
                                         isActive
                                             ? 'text-white bg-gradient-to-r from-primary to-navyLight shadow-md shadow-primary/20 scale-105'
-                                            : 'text-primary hover:text-brandOrange hover:bg-primary/5 hover:scale-105'
+                                            : isScrolled
+                                            ? 'text-primary hover:text-brandOrange hover:bg-primary/5 hover:scale-105'
+                                            : 'text-white/90 hover:text-white hover:bg-white/10 hover:scale-105'
                                     }`}
                                 >
                                     {item.label}
@@ -90,7 +92,13 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className={`p-2.5 rounded-2xl transition-all duration-300 ${
-                            isMenuOpen ? 'bg-primary/10 text-primary' : 'text-primary hover:bg-primary/5'
+                            isMenuOpen
+                                ? isScrolled
+                                    ? 'bg-primary/10 text-primary'
+                                    : 'bg-white/20 text-white'
+                                : isScrolled
+                                ? 'text-primary hover:bg-primary/5'
+                                : 'text-white hover:bg-white/10'
                         }`}
                         aria-label="Toggle menu"
                     >
