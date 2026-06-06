@@ -105,66 +105,66 @@ const Contact: React.FC = () => {
                 </div>
 
                 {/* Contact Form & Map Container */}
-                <div className="grid lg:grid-cols-2 gap-12 bg-white rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100">
+                <div className="grid lg:grid-cols-2 gap-8 bg-white rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100">
                     {/* Form */}
-                    <div className="p-12 md:p-16 space-y-8">
-                        <div className="space-y-4">
-                            <h2 className="text-4xl font-black text-brandRed font-display tracking-tight uppercase">Send a Message</h2>
-                            <p className="text-gray-500 text-lg">
+                    <div className="p-8 md:p-10 space-y-6">
+                        <div className="space-y-3">
+                            <h2 className="text-3xl font-black text-brandRed font-display tracking-tight uppercase">Send a Message</h2>
+                            <p className="text-gray-500 text-sm">
                                 Reach out to us for any queries related to admissions, academics, or events.
                             </p>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="space-y-5">
-                            <div className="grid md:grid-cols-2 gap-5">
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase tracking-widest text-primary/50 ml-1">Your Name</label>
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <div className="grid md:grid-cols-2 gap-4">
+                                <div className="space-y-1.5">
+                                    <label className="text-[9px] font-black uppercase tracking-widest text-primary/50 ml-1">Your Name</label>
                                     <input
                                         required
                                         type="text"
                                         placeholder="Full Name"
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        className="bg-softBg border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brandOrange outline-none w-full transition-all"
+                                        className="bg-softBg border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-brandOrange outline-none w-full transition-all text-sm"
                                     />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase tracking-widest text-primary/50 ml-1">Email Address</label>
+                                <div className="space-y-1.5">
+                                    <label className="text-[9px] font-black uppercase tracking-widest text-primary/50 ml-1">Email Address</label>
                                     <input
                                         required
                                         type="email"
                                         placeholder="email@example.com"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        className="bg-softBg border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brandOrange outline-none w-full transition-all"
+                                        className="bg-softBg border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-brandOrange outline-none w-full transition-all text-sm"
                                     />
                                 </div>
                             </div>
-                            <div className="space-y-2">
-                                <label className="text-[10px] font-black uppercase tracking-widest text-primary/50 ml-1">Subject</label>
+                            <div className="space-y-1.5">
+                                <label className="text-[9px] font-black uppercase tracking-widest text-primary/50 ml-1">Subject</label>
                                 <input
                                     required
                                     type="text"
                                     placeholder="How can we help?"
                                     value={formData.subject}
                                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                                    className="bg-softBg border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brandOrange outline-none w-full transition-all"
+                                    className="bg-softBg border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-brandOrange outline-none w-full transition-all text-sm"
                                 />
                             </div>
-                            <div className="space-y-2">
-                                <label className="text-[10px] font-black uppercase tracking-widest text-primary/50 ml-1">Message</label>
+                            <div className="space-y-1.5">
+                                <label className="text-[9px] font-black uppercase tracking-widest text-primary/50 ml-1">Message</label>
                                 <textarea
                                     required
-                                    rows={5}
+                                    rows={3}
                                     placeholder="Your message here..."
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                    className="bg-softBg border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brandOrange outline-none w-full transition-all resize-none"
+                                    className="bg-softBg border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-brandOrange outline-none w-full transition-all resize-none text-sm"
                                 />
                             </div>
                             <button
                                 type="submit"
-                                className="bg-primary text-white font-black text-xs uppercase tracking-[0.2em] py-5 px-10 rounded-2xl hover:bg-brandRed transition-all shadow-xl active:scale-95 w-full flex items-center justify-center gap-3 mt-4"
+                                className="bg-primary text-white font-black text-xs uppercase tracking-[0.2em] py-3.5 px-8 rounded-xl hover:bg-brandRed transition-all shadow-md active:scale-95 w-full flex items-center justify-center gap-3 mt-2"
                             >
                                 Send Message via WhatsApp
                             </button>
@@ -172,7 +172,7 @@ const Contact: React.FC = () => {
                     </div>
 
                     {/* Map Container - Keeping it placeholder or generic search embed */}
-                    <div className="relative h-[600px] lg:h-auto bg-gray-100">
+                    <div className="relative h-[400px] lg:h-auto bg-gray-100">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.741235339247!2d79.2730779252445!3d17.05995679252448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDAzJzM1LjkiTiA3OcKwMTYnMzIuNCJF!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
                             className="absolute inset-0 w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700 opacity-80 hover:opacity-100"

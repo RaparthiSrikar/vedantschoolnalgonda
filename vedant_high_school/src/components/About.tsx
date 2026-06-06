@@ -232,27 +232,30 @@ const About: React.FC = () => {
                                 <div
                                     key={i}
                                     onClick={() => setSelectedMember(member)}
-                                    className="bg-softBg rounded-3xl overflow-hidden border border-gray-50 flex flex-col hover:shadow-2xl transition-all duration-500 group h-full cursor-pointer transform hover:-translate-y-2"
+                                    className="bg-white rounded-[2rem] overflow-hidden border border-gray-100/80 flex flex-col shadow-sm hover:shadow-[0_20px_40px_rgba(49,62,103,0.06)] hover:border-brandOrange/20 transition-all duration-500 group h-full cursor-pointer transform hover:-translate-y-3"
                                 >
-                                    <div className="aspect-square bg-white overflow-hidden relative flex items-center justify-center">
-                                        <img
-                                            src={member.image}
-                                            alt={member.name}
-                                            className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700 scale-95 group-hover:scale-100"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                    </div>
-                                    <div className="p-10 flex-grow flex flex-col relative">
-                                        <div className="text-center mb-6">
-                                            <h3 className="text-2xl font-bold text-primary font-display leading-tight mb-2 group-hover:text-brandOrange transition-colors">{member.name}</h3>
-                                            <p className="text-accent font-black text-[10px] uppercase tracking-[0.25em]">{member.role}</p>
-                                            <div className="w-10 h-[2px] bg-brandYellow mx-auto mt-4"></div>
+                                    <div className="p-5 pb-0">
+                                        <div className="aspect-square bg-softBg rounded-2xl overflow-hidden relative flex items-center justify-center border border-gray-100/50">
+                                            <img
+                                                src={member.image}
+                                                alt={member.name}
+                                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                         </div>
-                                        <p className="text-gray-600 text-sm leading-relaxed text-center flex-grow">
+                                    </div>
+                                    <div className="p-8 pt-6 flex-grow flex flex-col relative">
+                                        <div className="text-center mb-5">
+                                            <p className="text-brandOrange font-bold text-xs uppercase tracking-[0.2em] mb-2">{member.role}</p>
+                                            <h3 className="text-2xl font-extrabold text-primary font-display leading-tight mb-3 group-hover:text-brandOrange transition-colors">{member.name}</h3>
+                                            <div className="w-12 h-1 bg-brandYellow mx-auto group-hover:w-20 transition-all duration-500 rounded-full"></div>
+                                        </div>
+                                        <p className="text-gray-500 text-sm leading-relaxed text-center flex-grow">
                                             {member.desc}
                                         </p>
-                                        <div className="mt-6 text-center">
-                                            <span className="text-brandOrange font-bold text-xs uppercase tracking-widest border-b border-brandOrange/30 pb-1 group-hover:border-brandOrange transition-colors">Read Bio</span>
+                                        <div className="mt-6 pt-4 border-t border-gray-50 flex items-center justify-between text-brandOrange font-bold text-xs uppercase tracking-widest">
+                                            <span className="opacity-80 group-hover:opacity-100 transition-opacity">Read Biography</span>
+                                            <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                                         </div>
                                     </div>
                                 </div>
@@ -260,32 +263,35 @@ const About: React.FC = () => {
                         </div>
 
                         {/* Second row - 2 cards centered */}
-                        <div className="flex justify-center gap-10">
+                        <div className="flex flex-col md:flex-row justify-center gap-10">
                             {leadership.slice(3, 5).map((member, i) => (
                                 <div
                                     key={i + 3}
                                     onClick={() => setSelectedMember(member)}
-                                    className="bg-softBg rounded-3xl overflow-hidden border border-gray-50 flex flex-col hover:shadow-2xl transition-all duration-500 group h-full cursor-pointer transform hover:-translate-y-2 w-full md:w-1/2 lg:w-1/3"
+                                    className="bg-white rounded-[2rem] overflow-hidden border border-gray-100/80 flex flex-col shadow-sm hover:shadow-[0_20px_40px_rgba(49,62,103,0.06)] hover:border-brandOrange/20 transition-all duration-500 group h-full cursor-pointer transform hover:-translate-y-3 w-full md:w-1/2 lg:w-1/3"
                                 >
-                                    <div className="aspect-square bg-white overflow-hidden relative flex items-center justify-center">
-                                        <img
-                                            src={member.image}
-                                            alt={member.name}
-                                            className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700 scale-95 group-hover:scale-100"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                    </div>
-                                    <div className="p-10 flex-grow flex flex-col relative">
-                                        <div className="text-center mb-6">
-                                            <h3 className="text-2xl font-bold text-primary font-display leading-tight mb-2 group-hover:text-brandOrange transition-colors">{member.name}</h3>
-                                            <p className="text-accent font-black text-[10px] uppercase tracking-[0.25em]">{member.role}</p>
-                                            <div className="w-10 h-[2px] bg-brandYellow mx-auto mt-4"></div>
+                                    <div className="p-5 pb-0">
+                                        <div className="aspect-square bg-softBg rounded-2xl overflow-hidden relative flex items-center justify-center border border-gray-100/50">
+                                            <img
+                                                src={member.image}
+                                                alt={member.name}
+                                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                         </div>
-                                        <p className="text-gray-600 text-sm leading-relaxed text-center flex-grow">
+                                    </div>
+                                    <div className="p-8 pt-6 flex-grow flex flex-col relative">
+                                        <div className="text-center mb-5">
+                                            <p className="text-brandOrange font-bold text-xs uppercase tracking-[0.2em] mb-2">{member.role}</p>
+                                            <h3 className="text-2xl font-extrabold text-primary font-display leading-tight mb-3 group-hover:text-brandOrange transition-colors">{member.name}</h3>
+                                            <div className="w-12 h-1 bg-brandYellow mx-auto group-hover:w-20 transition-all duration-500 rounded-full"></div>
+                                        </div>
+                                        <p className="text-gray-500 text-sm leading-relaxed text-center flex-grow">
                                             {member.desc}
                                         </p>
-                                        <div className="mt-6 text-center">
-                                            <span className="text-brandOrange font-bold text-xs uppercase tracking-widest border-b border-brandOrange/30 pb-1 group-hover:border-brandOrange transition-colors">Read Bio</span>
+                                        <div className="mt-6 pt-4 border-t border-gray-50 flex items-center justify-between text-brandOrange font-bold text-xs uppercase tracking-widest">
+                                            <span className="opacity-80 group-hover:opacity-100 transition-opacity">Read Biography</span>
+                                            <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                                         </div>
                                     </div>
                                 </div>
@@ -360,7 +366,7 @@ const About: React.FC = () => {
                                 <img
                                     src={selectedMember.image}
                                     alt={selectedMember.name}
-                                    className="w-full h-auto object-contain relative z-10"
+                                    className="w-full h-auto object-contain rounded-2xl shadow-lg border border-white/80 relative z-10"
                                 />
                             </div>
                         </div>

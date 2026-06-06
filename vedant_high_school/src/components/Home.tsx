@@ -8,11 +8,11 @@ interface HomeProps {
 
 const HERO_IMAGES = [
     {
-        url: "https://res.cloudinary.com/dkivpkaaj/image/upload/v1767506238/Screenshot_2026-01-04_at_11.26.40_AM_ld4pnj.png",
+        url: "/images/hero_science_project.png",
         alt: "Best school in Nalgonda modern classroom"
     },
     {
-        url: "https://res.cloudinary.com/dkivpkaaj/image/upload/v1767522619/Screenshot_2026-01-04_at_3.57.10_PM_y4dyh4.png",
+        url: "/images/hero_primary.jpg",
         alt: "Top school in Nalgonda primary education"
     },
     {
@@ -54,7 +54,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             {/* 
           Hero Section - 16:9 Aspect Ratio 
       */}
-            <section className="relative w-full aspect-video overflow-hidden group/hero shadow-2xl bg-primary">
+            <section className="relative w-full h-screen overflow-hidden group/hero shadow-2xl bg-primary">
                 <div className="absolute inset-0 z-0">
                     {HERO_IMAGES.map((slide, index) => (
                         <div
@@ -73,33 +73,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     ))}
                 </div>
 
-                {/* Left Navigation Bar */}
-                <button
-                    onClick={() => {
-                        setCurrentSlide((prev) => (prev === 0 ? HERO_IMAGES.length - 1 : prev - 1));
-                        startTimer();
-                    }}
-                    className="absolute left-0 top-0 h-full w-20 z-30 flex items-center justify-center opacity-0 group-hover/hero:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-black/20 to-transparent hover:from-black/40"
-                    aria-label="Previous slide"
-                >
-                    <svg className="w-10 h-10 text-white drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
 
-                {/* Right Navigation Bar */}
-                <button
-                    onClick={() => {
-                        nextSlide();
-                        startTimer();
-                    }}
-                    className="absolute right-0 top-0 h-full w-20 z-30 flex items-center justify-center opacity-0 group-hover/hero:opacity-100 transition-opacity duration-300 bg-gradient-to-l from-black/20 to-transparent hover:from-black/40"
-                    aria-label="Next slide"
-                >
-                    <svg className="w-10 h-10 text-white drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
 
                 <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-40 flex items-center space-x-3">
                     {HERO_IMAGES.map((_, index) => (
