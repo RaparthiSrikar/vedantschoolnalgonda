@@ -17,6 +17,8 @@ import BlogTop10 from './components/blog/BlogTop10';
 import BlogHowToChoose from './components/blog/BlogHowToChoose';
 import BlogCbseVsState from './components/blog/BlogCbseVsState';
 import CustomCursor from './components/CustomCursor';
+import WhatsAppButton from './components/WhatsAppButton';
+import AIChatbot from './components/AIChatbot';
 import AdmissionsModal from './components/AdmissionsModal';
 import { SEO_CONFIG } from './seoData';
 import './App.css';
@@ -106,9 +108,10 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      {/* Global Pencil Cursor */}
       <CustomCursor />
       <AdmissionsModal />
+      <WhatsAppButton />
+      <AIChatbot onNavigate={navigateTo} />
 
 
       <Navbar currentPage={currentPage} onNavigate={navigateTo} />
