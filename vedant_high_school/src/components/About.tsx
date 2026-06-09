@@ -52,7 +52,7 @@ const About: React.FC = () => {
             detailedBio: "S. Aditya Samrat serves as the Secretary of Sri Raghavendra Educational Society, overseeing Junior, Degree, P.G., B.Ed, and D.El.Ed institutions, and also holds the position of Director of the Society. He has completed his Master’s in Information Technology (MIT) abroad and brings over 15 years of experience as the Principal of a Degree College. With strong expertise in the implementation of technology and modern teaching methodologies, he plays a key role in integrating innovative and digital practices into everyday educational institutions."
         },
         {
-            name: "Shyam Prasad",
+            name: "Shyam Prasad Gunti",
             role: "Director",
             image: "https://res.cloudinary.com/dkivpkaaj/image/upload/v1767513741/Screenshot_2026-01-04_at_1.17.23_PM_se3buw.png",
             desc: "Passionate about nurturing curiosity, values, and holistic growth in every student",
@@ -235,7 +235,10 @@ const About: React.FC = () => {
                                     className="bg-white rounded-[2rem] overflow-hidden border border-gray-100/80 flex flex-col shadow-sm hover:shadow-[0_20px_40px_rgba(49,62,103,0.06)] hover:border-brandOrange/20 transition-all duration-500 group h-full cursor-pointer transform hover:-translate-y-3"
                                 >
                                     <div className="p-5 pb-0">
-                                        <div className="aspect-square bg-softBg rounded-2xl overflow-hidden relative flex items-center justify-center border border-gray-100/50">
+                                        <div 
+                                            className="bg-softBg rounded-2xl overflow-hidden relative flex items-center justify-center border border-gray-100/50 w-full"
+                                            style={{ aspectRatio: '3/4' }}
+                                        >
                                             <img
                                                 src={member.image}
                                                 alt={member.name}
@@ -271,7 +274,10 @@ const About: React.FC = () => {
                                     className="bg-white rounded-[2rem] overflow-hidden border border-gray-100/80 flex flex-col shadow-sm hover:shadow-[0_20px_40px_rgba(49,62,103,0.06)] hover:border-brandOrange/20 transition-all duration-500 group h-full cursor-pointer transform hover:-translate-y-3 w-full md:w-1/2 lg:w-1/3"
                                 >
                                     <div className="p-5 pb-0">
-                                        <div className="aspect-square bg-softBg rounded-2xl overflow-hidden relative flex items-center justify-center border border-gray-100/50">
+                                        <div 
+                                            className="bg-softBg rounded-2xl overflow-hidden relative flex items-center justify-center border border-gray-100/50 w-full"
+                                            style={{ aspectRatio: '3/4' }}
+                                        >
                                             <img
                                                 src={member.image}
                                                 alt={member.name}
@@ -351,37 +357,40 @@ const About: React.FC = () => {
                 >
                     <div
                         ref={modalRef}
-                        className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2.5rem] overflow-hidden shadow-2xl relative flex flex-col md:flex-row"
+                        className="bg-white w-full max-w-3xl max-h-[90vh] rounded-[2.5rem] overflow-hidden shadow-2xl relative flex flex-col md:flex-row"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button
                             onClick={() => setSelectedMember(null)}
-                            className="absolute top-6 right-6 z-20 bg-softBg shadow-lg p-3 rounded-full text-primary hover:bg-accent hover:text-white transition-all transform active:scale-90"
+                            className="absolute top-4 right-4 z-20 bg-softBg shadow-lg p-2.5 rounded-full text-primary hover:bg-accent hover:text-white transition-all transform active:scale-90"
                         >
                             <Icons.Close />
                         </button>
 
-                        <div className="w-full md:w-2/5 bg-softBg flex items-center justify-center p-10 border-b md:border-b-0 md:border-r border-gray-100">
-                            <div className="w-full h-full flex items-center">
+                        <div className="w-full md:w-[35%] bg-softBg flex items-center justify-center p-5 border-b md:border-b-0 md:border-r border-gray-100">
+                            <div 
+                                className="w-full rounded-2xl overflow-hidden shadow-lg border border-white/80 relative z-10"
+                                style={{ aspectRatio: '3/4' }}
+                            >
                                 <img
                                     src={selectedMember.image}
                                     alt={selectedMember.name}
-                                    className="w-full h-auto object-contain rounded-2xl shadow-lg border border-white/80 relative z-10"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
                         </div>
 
-                        <div className="w-full md:w-3/5 p-8 md:p-12 overflow-y-auto">
-                            <div className="mb-8">
-                                <p className="text-accent font-black text-xs uppercase tracking-[0.3em] mb-3">{selectedMember.role}</p>
-                                <h2 className="text-3xl md:text-4xl font-bold text-brandOrange font-display leading-tight">{selectedMember.name}</h2>
+                        <div className="w-full md:w-[65%] p-6 md:p-8 overflow-y-auto">
+                            <div className="mb-6">
+                                <p className="text-accent font-black text-xs uppercase tracking-[0.3em] mb-2">{selectedMember.role}</p>
+                                <h2 className="text-2xl md:text-3xl font-bold text-brandOrange font-display leading-tight">{selectedMember.name}</h2>
                             </div>
                             <div className="prose prose-sm md:prose-base prose-primary max-w-none">
-                                <p className="text-gray-600 leading-relaxed text-lg italic mb-6">
+                                <p className="text-gray-600 leading-relaxed text-base italic mb-4">
                                     {selectedMember.desc}
                                 </p>
-                                <div className="h-px bg-gray-100 w-full mb-8"></div>
-                                <p className="text-gray-700 leading-relaxed text-base whitespace-pre-wrap">
+                                <div className="h-px bg-gray-100 w-full mb-6"></div>
+                                <p className="text-gray-700 leading-relaxed text-sm whitespace-pre-wrap">
                                     {selectedMember.detailedBio || selectedMember.desc}
                                 </p>
                             </div>

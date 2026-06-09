@@ -39,12 +39,14 @@ const LearningTools: React.FC = () => {
 
     return (
         <div className="bg-white min-h-screen animate-fade-in">
-            {/* Header Section with Orange Background */}
-            <section className="bg-brandOrange pt-32 pb-24 text-white text-center relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-white/5 opacity-10 pointer-events-none"></div>
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            {/* Header Section with Background Image */}
+            <section 
+                className="pt-32 pb-24 text-white text-center relative overflow-hidden bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/learning_tools_bg.png')" }}
+            >
+                <div className="absolute inset-0 bg-slate-950/60 z-0"></div>
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
-                    <h1 className="text-5xl font-black font-display mb-4 uppercase tracking-tight">Learning Tools & Infrastructure</h1>
+                    <h1 className="text-5xl font-black font-display mb-4 uppercase tracking-tight text-white">Learning Tools & Infrastructure</h1>
                     <p className="text-white/90 max-w-2xl mx-auto font-medium leading-relaxed">
                         Vedant High School is committed to providing students with the best resources to support their academic and personal growth.
                     </p>

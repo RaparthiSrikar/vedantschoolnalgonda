@@ -45,9 +45,12 @@ const Admissions: React.FC = () => {
     return (
         <div className="animate-fade-in bg-white">
             {/* Header section with increased padding for touching navbar */}
-            <section className="bg-brandOrange pt-32 pb-24 text-white text-center relative overflow-hidden">
-                {/* Subtle texture overlay */}
-                <div className="absolute inset-0 bg-white/5 opacity-20 pointer-events-none"></div>
+            {/* Header section with background image */}
+            <section 
+                className="pt-32 pb-24 text-white text-center relative overflow-hidden bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/admissions_ai_bg.png')" }}
+            >
+                <div className="absolute inset-0 bg-slate-950/60 z-0"></div>
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <h1 className="text-5xl font-black font-display mb-4 text-white uppercase tracking-tight">Join Our Community</h1>
                     <p className="text-white/90 max-w-2xl mx-auto font-medium">Admissions Open for {currentYear}–{nextYear}</p>

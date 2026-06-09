@@ -66,17 +66,20 @@ const Academics: React.FC = () => {
 
     return (
         <div className="animate-fade-in bg-white">
-            <section className="bg-brandOrange pt-32 pb-24 text-white text-center relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-white opacity-5"></div>
+             <section 
+                className="pt-32 pb-24 text-white text-center relative overflow-hidden bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/academic_excellence_bg.jpg')" }}
+             >
+                <div className="absolute inset-0 bg-slate-950/70 z-0"></div>
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
-                    <h1 className="text-5xl md:text-7xl font-black font-display mb-6 tracking-tight text-white uppercase">
-                        Academic <span className="text-white">Excellence</span>
-                    </h1>
-                    <p className="text-white/90 text-lg max-w-2xl mx-auto font-medium leading-relaxed">
-                        A curriculum designed for the holistic growth of the 21st-century learner.
-                    </p>
+                    {/* Spacer to preserve original banner size */}
+                    <div className="h-[150px] md:h-[180px]"></div>
+                    
+                    {/* Screen reader only text for accessibility & SEO */}
+                    <h1 className="sr-only">Academic Excellence</h1>
+                    <p className="sr-only">A curriculum designed for the holistic growth of the 21st-century learner.</p>
                 </div>
-            </section>
+             </section>
 
             <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="space-y-32">
