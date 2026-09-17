@@ -99,7 +99,7 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = ({ onNavigate }) => 
 
 
 
-                    </div>
+                </div>
 
                 {/* Horizontal Line Separator */}
                 <div className="w-full h-px bg-white/20 mb-6"></div>
@@ -133,7 +133,7 @@ const Footer: React.FC<{ onNavigate: (p: Page) => void }> = ({ onNavigate }) => 
                 {/* Copyright */}
                 <div className="text-center">
                     <p className="text-[14px] uppercase tracking-[0.3em] text-white/30 font-black">
-                        © {currentYear} Vedant High School. Empowering Futures, Rooted in Values.
+                        © {currentYear} Vedant High School. All rights reserved. Powered by SRI RAGHA VENDRA EDUCATIONAL SOCIETY
                     </p>
                 </div>
             </div>
